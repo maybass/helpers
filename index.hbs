@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+</head>
+<body>
+<p>{{titulo}}</p>
+<p>El caballero {{persona.nombre}} tiene {{persona.edad}} anos</p>
+<div class="producto">
+{{#if promocion}}
+<p>{{texto}}</p>
+{{/if}}
+</div>
+
+<div>
+{{#if descuento.activo}}
+<p>{{descuento.leyenda}}</p>
+{{/if}}
+
+</div>
+
+<div class="talle">
+{{#if talle.hay}}
+<p>{{talle.leyendaPositiva}}</p>
+{{else}}
+</p>No hay talle</p>
+{{/if}}
+</div>
+
+
+<div class="disponible">
+
+{{#if productos.disponibilidad}}
+
+<p>Los productos disponibles son:</p>
+<ul>
+<li>{{productos.compu}}</li>
+<li>{{productos.cpu}}</li>
+<li>{{productos.mouse}}</li>
+
+</ul>
+{{else}}
+<p>No hay productos disponibles</p>
+{{/if}}
+</div>
+
+
+<div class="remeras">
+
+{{#each remeras}}
+<ul>
+<li>{{this}}</li>
+</ul>
+
+{{/each}}
+
+</div>
+
+
+<div class="computadoras">
+{{#each computadoras}}
+<ul>
+<li>{{this.item}} y su precio {{this.precio}} </li>
+
+</ul>
+
+
+{{/each}}
+
+
+
+
+</div>
+
+
+</body>
+</html>

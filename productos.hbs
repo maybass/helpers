@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+<style>
+.tachado {
+	text-decoration: line-through;
+}
+</style>
+</head>
+<body>
+
+
+<ul>
+{{#each computadoras}}
+{{#if hayStock}}
+
+<li>el item es {{mayusculas item}} , el precio es <span class="tachado >{{precio}} </span> y con descuento {{ descuento precio}}, hay stock {{hayStock}} y la cantidad es {{cantidad}}</li>
+{{else}}
+<li>el item es {{item}} , el precio es {{precio}} y con descuento {{descuento precio}} PERO POR EL MOMENTO NO HAY UNIDADES DISPONIBLES</li>
+
+
+
+{{/if}}
+
+{{/each}}
+
+
+
+</ul>
+
+
+<div>
+<ul>
+{{#each computadoras}}
+{{#if hayStock}}
+<p>{{precio}} y {{mayusculas item}} </p>
+{{/if}}
+{{/each}}
+</ul>
+</div>
+
+
+
+</body>
+</html>
